@@ -1,0 +1,22 @@
+prop devuelve el valor de una key
+assoc asigna la propiedad pero devuelve el objeto
+mapKeys le aplica una transformacion a todas las mapKeys
+mapValues le aplica una transformacion a todos los mapValues
+
+Composicion de funciones:
+cada funcion no es tanto una solucion, sino una pieza
+para construir nuestro programa
+
+
+Objetos: encapsulamos el estado
+Funcional: el estado fluye entre funciones
+y puedo ir construyendo capas de abstracion cada vez
+mas altas para solucionar nuestros problemas
+
+Esto funciona pq al ser funciones puras estan
+aisladas, no afectan a nada mas. canales por 
+donde fluyen los datos.
+Problema de la programacion funcional: algiuen nuevo
+tiene que aclimatarse.
+Es como crear un vocabulario
+

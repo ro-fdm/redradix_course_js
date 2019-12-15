@@ -1,0 +1,101 @@
+Apuntes
+
+Let
+let nueva forma de declarar variables
+mueve todas las declaraciones de las variales al principio de la funcion.
+
+en los loop si la variable no esta dentro da error
+
+
+Arrow functions: sugar sintax
+ej:
+const suma = (a, b) => a+b
+no necesita return si es una sola linea
+tambien necesita {} si tiene mas de una linea
+son funciones anonimas, pero las podemos guardar dentro de una variable
+
+si solo hay un argumento no necesito la flecha?
+
+Clausura:
+Acceder a una funcion fuera del scope
+
+cuando en una funcion hacemos referencia a una funcion en un scope superior es pq la clausura de la funcion lo incluye
+a lo que tiene acceso en el momento de crear la funcion
+
+function counter() {
+let i = 0;
+return () => i++;
+}
+esa i solo se inicializa la primera vez que llamamos a counter
+
+
+claves dinamicas
+const obj3 = { ['a' + 'b']: 1 }; una unica propiedad (clave)
+usando [] lo que de lo de dentro sera la key
+
+
+los objetos funcionan por referencia (donde esta guardado en memoria)
+por eso const k = 'a';
+const obj1 = { [k]: 1 };
+const obj2 = { [k]: 1 };
+
+obj1 === obj2; son diferentes
+
+
+fusionar objetos
+const a = { a: 1 }
+const b = { b: 2 }
+
+Object.assign(a, b) hace un push a de b, 
+a = {a:1, b:2} y sobreescribe si esta repetido
+b se mantiene igual
+si son varios todo al primero, y el resto no cambian
+
+console.log(a)
+console.log(b)
+
+Contexto:
+referencia al objeto al que pertenece una funcion
+
+en una arrow function no hace rferencia al objeto, sino que es el mismo
+dentro que fuera
+las arrow function no tienen contexto, cogen el ultimo contexto definido
+
+obj no le pasamos contexto y usa el que existe
+call y apply -> le pasamos el contexto
+
+Object.defineProperty
+permite añadir propiedades especiales
+variables invisibles => propiedades privadas
+con enumerable es visible
+con configurable podemos redefinir
+writable false para que sea solo lectura
+
+get permite asignar una funcion y cuando lo llamamos la ejecutamos
+ej length es una propiedad que es un get, funcion que se ejecuta cuando lo llamamos
+
+PROTOTIPOS
+La herencia no es por clases sino por PROTOTIPOS
+Todos los objetos tienen un puntero invisible a su prototipo, otro objeto que tambien tendra varibles, funciones, propiedades
+Asi tenemmos cadenas de objetos que heredan propiedades. Y cuando intentamos acceder a una propiedad se buscara desde el mas especifico al mas general
+
+todos los objetos, sino tienen otro prototipo, son un Object
+
+Creare prototipo:
+Object.create(proto, properties) -> nuevo objeto con prototipo el que le hem os pasado
+
+
+las variables del prototipo si se pueden asignar directamente, pero las propiedades tipo array son compartidas
+
+
+CONSTRUCTORES:
+cuando asignamos cosas a traves del this, no lo guardan en el prototipo sino el this del objeto
+
+se llama con new al constructor
+para añadir cosas funciones seria
+NombreConstructor.prototype.nombrefuncion
+
+propiedades objeto -> estado
+funciones prototipo
+
+

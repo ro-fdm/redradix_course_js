@@ -1,0 +1,24 @@
+promesas
+
+representa un valor futuro
+como observables
+intermediario entre productor y consumidores
+
+caja a la  que se accede con el then callback y return devuelve el resultado del callback
+permite ir encadenando resultados de callbacks en lugar de ponerlos dentro
+
+then la hace ejecutar
+catch captura los errores
+a una promesa se pueden conectar varios then
+
+then solo se ejecuta cuando llamo a resolve
+
+
+podemos llamar al then de forma encadenada
+
+Promesa.all nos permiete resolver todas las promesas
+
+asyn await permite parar el codigo hasta que se resuelva la promesa, convierte codigo asincrono a sincrono
+por lo tanto podemos obtener un retorno
+y usar o catch o try catch
+

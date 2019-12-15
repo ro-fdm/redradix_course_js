@@ -1,0 +1,36 @@
+Programacion funcional
+
+sin estado
+transformando datos
+
+estado: conjunto de valores almacenados en las variables
+funcion pura: no accede a nada que no se le pase por parametro
+efecto secundario: cuando una funcion modifica algo que esta fuera de la funcion
+
+programacion imperativa: le digo a mi programa lo que tiene que hacer
+programacion declarativa: le digo lo que quiero que haga pero no le digo como (ejemplo sql o jquery)
+
+quien escribe la logica dle programa
+
+expresion: combinacion de valores, operadores y constantes
+
+funciones de orden superior:
+reciben funciones como parametros (operan como parametros)
+devuelven funciones
+abstraen acciones
+
+
+Map aplica sobre cada elemento del array la funcion que le pasamos y devuelve el array de los resultados
+Filter: solo devuelve los elmentos del array que cumple la funcion
+
+Reduce: recibe un array un una funcion, es parecido a inject, devuelve lo que 
+
+let nums = [1,2,3,4]
+
+nums.reduce((acc, x) => acc + x, 0)
+primera interacion acc es 0
+segunda interaccion 0 +1  1
+segunda interacion 
+
+0 es el valor inicial de acumulado
+a ese acc le vamos pasndo la funcion y el nuevo resultado pasa a ser el acc
